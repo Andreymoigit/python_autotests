@@ -20,7 +20,7 @@ def test_trainer_name():
     """
     GT-2. Check trainer name
     """
-    response_get = requests.get(url = f'{URL}/me', headers = HEADER, 
+    response_get = requests.get(url = f'{URL}/me', headers = HEADER,
                                 params = {'trainer_id' : TRAINER_ID},
                                 timeout=5)
     assert response_get.json()["data"][0]['trainer_name'] == 'Grand master byte', \
